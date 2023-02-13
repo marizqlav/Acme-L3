@@ -8,4 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- Rafael Corchuelo (corchu@us.es)
+- José Miguel García Casillas (josgarcas4@alum.us.es)
+- Enrique Caballero Muñoz (enrcabmun@alum.us.es)
+- Marco Chasco Barry (marchabar1@alum.us.es)
+- Félix Gudiel Güemes ()
