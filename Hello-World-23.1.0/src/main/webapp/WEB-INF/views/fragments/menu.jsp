@@ -21,7 +21,7 @@
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link1" action="https://github.com/silvglad"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link2" action="https://github.com/FelixoGudiel/"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link3" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link3" action="https://es.wikipedia.org/wiki/Wikipedia:Portada"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link4" action="https://leetcode.com/"/>
 		</acme:menu-option>
 
