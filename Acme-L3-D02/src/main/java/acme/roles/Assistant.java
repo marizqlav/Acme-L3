@@ -12,14 +12,8 @@
 
 package acme.roles;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -31,7 +25,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Peep extends AbstractRole {
+public class Assistant extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -39,25 +33,20 @@ public class Peep extends AbstractRole {
 
 	// Attributes -------------------------------------------------------------
 
-	@Temporal(TemporalType.TIME)
-	@Past
-	@NotNull
-	protected Date				moment;
-
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
-
-	@NotBlank
-	@Length(max = 75)
-	protected String			nick;
+	protected String			supervisor;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			message;
+	protected String			expertiseFields;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			resume;
 
 	@URL
-	protected String			email;
+	protected String			moreInfo;
 
 	// Derived attributes -----------------------------------------------------
 
