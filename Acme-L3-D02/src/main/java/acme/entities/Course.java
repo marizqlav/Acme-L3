@@ -46,12 +46,11 @@ public class Course extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstractt;
+	protected String			abstractDoc;
 
 	@NotNull
-	protected Boolean			theory;
-	//If 1, we're talking about a theory course. If 0, it's a hands-on course.
-	//This has to be fixed later on since we need to relationate it with a future entity
+	protected Boolean			isTheoretical;
+	//This has to be fixed later on since we need to relation it with Lecture
 	//Needs a constraint on purely theoretical courses
 
 	@NotNull
