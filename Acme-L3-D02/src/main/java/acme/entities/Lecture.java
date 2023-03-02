@@ -2,6 +2,7 @@
 package acme.entities;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
@@ -10,6 +11,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.framework.data.AbstractEntity;
+import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,16 +36,24 @@ public class Lecture extends AbstractEntity {
 
 	@NotNull
 	@Positive
-	protected Integer			estimatedHours;
+	protected Double			estimatedHours;
 
 	@NotBlank
 	@Length(max = 100)
 	protected String			body;
 
 	@NotNull
-	protected Boolean			isTheoretical;
+	protected TypeNature		type;
 
 	@URL
 	protected String			link;
+
+	// Relationships ----------------------------------------------------------
+
+	@ManyToOne(optional = false)
+	protected Course			course;
+
+	@ManyToOne(optional = false)
+	protected Lecturer			lecturer;
 
 }
