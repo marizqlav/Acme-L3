@@ -14,20 +14,26 @@ package acme.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.PositiveOrZero;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.TypeNature;
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
+import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Practicum extends AbstractEntity {
+public class Course extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -44,12 +50,22 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			overview;
-
-	@NotBlank
-	@Length(max = 100)
-	protected String			goals;
+	protected String			abstractDoc;
 
 	@NotNull
-	protected Double			estimatedTime;
+	protected TypeNature		type;
+	//Needs a constraint on purely theoretical courses
+
+	@NotNull
+	@PositiveOrZero
+	protected Money				price;
+
+	@URL
+	protected String			moreInfo;
+
+	// Relationships ----------------------------------------------------------
+
+	@ManyToOne(optional = false)
+	protected Lecturer			lecturer;
+
 }
