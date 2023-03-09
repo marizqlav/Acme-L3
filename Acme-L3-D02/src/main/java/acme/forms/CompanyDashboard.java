@@ -1,8 +1,7 @@
 
 package acme.forms;
 
-import java.util.Map;
-
+import acme.entities.Statistic;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,17 +16,10 @@ public class CompanyDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<String, Integer>		totalPracticaByMonth;
+	int[]						practicaPerCourseLastYear;
 
-	Double						avgPract;
-	Double						devPract;
-	Double						minPract;
-	Double						maxPract;
+	Statistic					statisticsPract;
+  
+	Statistic					statisticsSess;
 
-	Map<String, Double>			maxDurationSessionByPractica;
-
-	Double						avgSession;
-	Double						devSession;
-	Double						minSession;
-	Double						maxSession;
 }
