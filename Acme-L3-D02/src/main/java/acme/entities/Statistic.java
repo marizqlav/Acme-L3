@@ -2,7 +2,6 @@
 package acme.entities;
 
 import javax.persistence.Entity;
-import javax.validation.constraints.NotNull;
 
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
@@ -17,7 +16,6 @@ public class Statistic extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
-	@NotNull
 	int							counter;
 
 	Double						average;
