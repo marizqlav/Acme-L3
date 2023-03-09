@@ -10,20 +10,20 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.datatypes;
+package acme.entities;
 
-import javax.persistence.Embeddable;
+import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
-import acme.framework.data.AbstractDatatype;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-@Embeddable
+@Entity
 @Getter
 @Setter
-public class Currency extends AbstractDatatype {
+public class Configuration extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -33,6 +33,6 @@ public class Currency extends AbstractDatatype {
 	protected String			defaultCurrency;
 
 	@NotBlank
-	@Pattern(regexp = " [A-Z]{3}(,[A-Z]{3})+")
+	@Pattern(regexp = "[A-Z]{3}(\\s*,\\s*[A-Z]{3})+")
 	protected String			acceptedCurrencies;
 }
