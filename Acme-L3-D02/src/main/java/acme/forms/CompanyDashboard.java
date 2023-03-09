@@ -19,6 +19,7 @@ public class CompanyDashboard extends AbstractForm {
 	int[]						practicaPerCourseLastYear;
 
 	Statistic					statisticsPract;
-
+  
 	Statistic					statisticsSess;
+
 }
