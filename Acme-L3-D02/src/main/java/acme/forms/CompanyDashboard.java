@@ -24,6 +24,8 @@ public class CompanyDashboard extends AbstractForm {
 	Double						minPract;
 	Double						maxPract;
 
+	Map<String, Double>			maxDurationSessionByPractica;
+
 	Double						avgSession;
 	Double						devSession;
 	Double						minSession;
