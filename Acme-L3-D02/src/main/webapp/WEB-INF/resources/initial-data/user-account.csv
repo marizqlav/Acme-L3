@@ -7,4 +7,3 @@ user-account-lecturer-01,true,"UserIdentity{name: 'Lect', surname: 'Rer', email:
 user-account-lecturer-02,true,"UserIdentity{name: 'Mist', surname: 'Class', email: 'lect@acme.com'}",lecturer2,lecturer2
 user-account-lecturer-03,false,"UserIdentity{name: '御琴羽', surname: '寿沙都', email: 'susa@hotmail.com'}",lecturer3,lecturer3
 user-account-lecturer-04,true,"UserIdentity{name: 'Андрей', surname: 'Яков', email: 'a@alum.us.es'}",lecturer4,lecturer4
-
