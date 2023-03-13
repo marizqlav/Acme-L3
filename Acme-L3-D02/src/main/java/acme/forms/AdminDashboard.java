@@ -3,15 +3,15 @@ package acme.forms;
 
 import java.util.Map;
 
-import acme.datatypes.TypeNature;
 import acme.entities.Statistic;
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class LecturerDashboard extends AbstractForm {
+public class AdminDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -19,10 +19,13 @@ public class LecturerDashboard extends AbstractForm {
 
 	// Attributes -------------------------------------------------------------
 
-	Map<TypeNature, Integer>	numLecturesByType;
+	Map<String, Integer>		numPrincipalsByRole;
 
-	Statistic					statisticsTimeLectures;
+	Double						ratioPeepsEmailAndLink;
+	Double						ratioCriticalBulleting;
+	Double						ratioNonCriticalBulleting;
 
-	Statistic					statisticsTimeCourses;
+	Map<Money, Statistic>		statisticsBudgetByCurrency;
+	Statistic					statisticsNotesLastTenWeeks;
 
 }
