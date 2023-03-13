@@ -2,5 +2,10 @@ key,key:lecturer,key:course,title,abstract-doc,estimated-hours,body,type,more-in
 lecture-01,lecturer-01,course-01,"Data and Testing 2, Class 1",Learn to model and test your data,2.5,This happens and that happens,THEORETICAL,
 lecture-02,lecturer-02,course-02,Psychology Laboratory 1,Hands-on practices on the subject,1.0,Lorem ipsum,HANDS_ON,https://susatoss.wordpress.com
 lecture-03,lecturer-01,course-06,(´･ｪ･｀): (●´^｀●),"<script>alert(""hi"")</script>",0.1,ꯁꯥꯇꯣ,BALANCED,
-lecture-04,lecturer-04,course-05,system.out.println(,print(,414124123,javascript: (function () {  } ),BALANCED,
+lecture-04,lecturer-04,course-05,system.out.println(""hello"");,print(""hi"");,414124123,javascript: (function () {  } ),BALANCED,
 lecture-05,lecturer-03,course-01,",,,,,,,,,,,,,,,,,,,,,,,","<script>alert(""hi"")</script>",0.000000000001,https://consent.youtube.com/m?continue=https%3A%2F%2F=ES&m=0&pc=yt&cm=,THEORETICAL,https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCBODyKF0JMbUd6D9Bklyzbw%3Fcbrd%3D1&gl=ES&m=0&pc=yt&cm=
+lecture-06,lecturer-01,course-01,(´･ｪ･｀): (●´^｀●),Learn to model and test your data,2.5,This happens and that happens,THEORETICAL,
+lecture-07,lecturer-01,course-01,"Data and Testing 2, Class 1",print(""hi""),2.5,This happens and that happens,THEORETICAL,
+lecture-08,lecturer-01,course-01,"Data and Testing 2, Class 1",Learn to model and test your data,0.01,This happens and that happens,THEORETICAL,
+lecture-09,lecturer-01,course-01,"Data and Testing 2, Class 1",Learn to model and test your data,2.5,https://consent.youtube.com/m?continue=https%3A%2F%2F=ES&m=0&pc=yt&cm=,THEORETICAL,
+lecture-10,lecturer-01,course-01,"Data and Testing 2, Class 1",Learn to model and test your data,2.5,This happens and that happens,BALANCED,https://consent.youtube.com/m?continue=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUCBODyKF0JMbUd6D9Bklyzbw%3Fcbrd%3D1&gl=ES&m=0&pc=yt&cm=
