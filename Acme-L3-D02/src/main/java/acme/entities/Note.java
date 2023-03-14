@@ -24,14 +24,14 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.data.AbstractRole;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Note extends AbstractRole {
+public class Note extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -46,10 +46,6 @@ public class Note extends AbstractRole {
 	@NotBlank
 	@Length(max = 75)
 	protected String			title;
-
-	@NotBlank
-	@Length(max = 75)
-	protected String			author;
 
 	@NotBlank
 	@Length(max = 101)
