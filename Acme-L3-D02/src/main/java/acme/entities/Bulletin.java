@@ -24,14 +24,14 @@ import javax.validation.constraints.PastOrPresent;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import acme.framework.data.AbstractRole;
+import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Bulletin extends AbstractRole {
+public class Bulletin extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
