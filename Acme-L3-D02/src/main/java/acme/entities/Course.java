@@ -1,5 +1,5 @@
 /*
- * Consumer.java
+ * UserIdentity.java
  *
  * Copyright (C) 2012-2023 Rafael Corchuelo.
  *
@@ -12,37 +12,37 @@
 
 package acme.entities;
 
-import java.util.Date;
-
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+import javax.persistence.ManyToOne;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.TypeNature;
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
+import acme.roles.Lecturer;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class Bulletin extends AbstractEntity {
+public class Course extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	@PastOrPresent
-	protected Date				instatiationMoment;
+	@NotBlank
+	@Column(unique = true)
+	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	protected String			code;
 
 	@NotBlank
 	@Length(max = 75)
@@ -50,16 +50,23 @@ public class Bulletin extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			message;
+	protected String			abstractDoc;
 
 	@NotNull
-	protected Boolean			critical;
+	protected TypeNature		type;
+	//Needs a constraint on purely theoretical courses
+
+	@NotNull
+	protected Money				price;
 
 	@URL
 	protected String			moreInfo;
 
-	// Derived attributes -----------------------------------------------------
-
 	// Relationships ----------------------------------------------------------
+
+	@ManyToOne(optional = false)
+	@NotNull
+	@Valid
+	protected Lecturer			lecturer;
 
 }
