@@ -24,5 +24,4 @@ public class StudentDashboard extends AbstractForm {
 	Statistic					statisticsActivities;
 
 	Statistic					statisticsCourses;
-
 }
