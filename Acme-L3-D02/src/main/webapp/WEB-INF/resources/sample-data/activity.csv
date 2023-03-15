@@ -1,0 +1,3 @@
+key,key:enrolment,title,summary,activityType,periodStart,periodEnd,link
+activity-01,enrolment-01,Test-001,Test the web application given in the URL,HANDS_ON,2022/03/04 11:00,2022/03/04 11:01,https://www.instagram.com
+activity-02,enrolment-02,Relaxation,"Formal classes will not begin yet, wait until we have more information",THEORETICAL,2022/03/04 11:00,2022/03/04 13:20,null
