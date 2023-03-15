@@ -10,3 +10,5 @@ user-account-lecturer-03,false,"UserIdentity{name: '御琴羽', surname: '寿沙
 user-account-lecturer-04,true,"UserIdentity{name: 'Андрей', surname: 'Яков', email: 'a@alum.us.es'}",lecturer4,lecturer4
 user-account-student-01,true,"UserIdentity{name: 'Stu', surname: 'Dant', email: 'student1@acme.com'}",student1,student1
 user-account-student-02,true,"UserIdentity{name: 'Estoo', surname: 'Dient', email: 'student2@acme.com'}",student2,student2
+user-account-assistant-01,true,"UserIdentity{name: 'Carlos', surname: 'García', email: 'cargar23A@acme.com'}",assistant1,assistant1
+user-account-assistant-02,true,"UserIdentity{name: '파블로', surname: '루이즈', email: 'pabruiz1852@acme.com'}",assistant2,assistant2
