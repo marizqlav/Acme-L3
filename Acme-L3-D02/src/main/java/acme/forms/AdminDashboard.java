@@ -4,7 +4,6 @@ package acme.forms;
 import java.util.Map;
 
 import acme.entities.Statistic;
-import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractForm;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,7 +24,7 @@ public class AdminDashboard extends AbstractForm {
 	Double						ratioCriticalBulleting;
 	Double						ratioNonCriticalBulleting;
 
-	Map<Money, Statistic>		statisticsBudgetByCurrency;
+	Map<String, Statistic>		statisticsBudgetByCurrency;
 	Statistic					statisticsNotesLastTenWeeks;
 
 }

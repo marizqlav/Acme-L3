@@ -1,5 +1,20 @@
-key,key:company,code,title,overview,goals
-practicum-01,company-02,MZN654,Databases Practicum,second overview,play hard
-practicum-02,company-01,JKX987,Machine Learning,Lorem ipsum,competing for the 3 best algorithms
-practicum-03,company-01,MCB142,Whatsoever,Try your best,try it
-practicum-04,company-02,HDE989,Tree Pruning Algorithms,다양한 샘플 데이터를 생성하여 애플리케이션을 비공식적으로 테스트할 수 있습니다,learn and enjoy
+key,key:company,key:course,code,title,overview,goals
+practicum-01,company-02,course-01,A111,Databases Practicum,second overview,play hard
+practicum-02,company-02,course-01,AA111,Databases Practicum,second overview,play hard
+practicum-03,company-02,course-01,AAA111,Databases Practicum,second overview,play hard
+practicum-04,company-02,course-01,MNZ989,Databases Practicum,second overview,play hard
+practicum-05,company-02,course-01,A222,D,second overview,play hard
+practicum-06,company-02,course-01,A333,Da,second overview,play hard
+practicum-07,company-02,course-01,A444,abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !,second overview,play hard
+practicum-08,company-02,course-01,A555,abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !a,second overview,play hard
+practicum-09,company-02,course-01,A666,console.log("printing line"),second overview,play hard
+practicum-10,company-02,course-01,A777,Databases Practicum,s,play hard
+practicum-11,company-02,course-01,A888,Databases Practicum,se,play hard
+practicum-12,company-02,course-01,A999,Databases Practicum,Lorem ipsum dolor sit ametnconsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanm,play hard
+practicum-13,company-02,course-01,Z111,Databases Practicum,Lorem ipsum dolor sit ametnconsectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanmm,play hard
+practicum-14,company-02,course-01,Z222,Databases Practicum,привет,play hard
+practicum-15,company-02,course-01,Z333,Databases Practicum,second overview,p
+practicum-16,company-02,course-01,Z444,Databases Practicum,second overview,pl
+practicum-17,company-02,course-01,Z555,Databases Practicum,second overview,Lorem ipsum dolor sit amet. consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+practicum-18,company-02,course-01,Z666,Databases Practicum,second overview,Lorem ipsum dolor sit amet. consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aeneanm 
+practicum-19,company-02,course-01,Z777,Databases Practicum,second overview,***^^^^^^^¨¨¨¨¨¨¨
