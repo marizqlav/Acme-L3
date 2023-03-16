@@ -29,10 +29,10 @@ public class Configuration extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{3}")
+	@Pattern(regexp = "^[A-Z]{3}$")
 	protected String			defaultCurrency;
 
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{3}(\\s*,\\s*[A-Z]{3})+")
+	@Pattern(regexp = "^[A-Z]{3}(\\s*,\\s*[A-Z]{3})+$")
 	protected String			acceptedCurrencies;
 }
