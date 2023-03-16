@@ -17,7 +17,6 @@ public class Statistic extends AbstractEntity {
 	protected static final long	serialVersionUID	= 1L;
 
 	int							counter;
-
 	Double						average;
 	Double						deviation;
 	Double						minimum;
