@@ -36,7 +36,7 @@ public class SessionTutorial extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			abstract$;
 
 	@NotNull
 	protected TypeNature		type;

@@ -1,4 +1,4 @@
-key,key:tutorial,title,summary,type,start-date,finish-date,more-info
+key,key:tutorial,title,abstract$,type,start-date,finish-date,more-info
 session-tutorial-01,tutorial-01,Session 1,Welcome to the session tutorial,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,https://es.wikipedia.org/wiki/Wikipedia:Portada
 session-tutorial-02,tutorial-02,Session 2,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
 session-tutorial-03,tutorial-02,P,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,

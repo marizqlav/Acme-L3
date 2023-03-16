@@ -1,4 +1,4 @@
-key,key:assistant,key:course,code,title,summary,goals
+key,key:assistant,key:course,code,title,abstract$,goals
 tutorial-01,assistant-01,course-02,A443,Performance Improvement,Improve performance of a team,Improve performance by 20%
 tutorial-02,assistant-02,course-01,B943,Fix water dispenser,Learn to fix water dispensers,Fix at least one water dispenser
 tutorial-03,assistant-01,course-02,Z443,Performance Improvement,Improve performance of a team,Improve performance by 20%
