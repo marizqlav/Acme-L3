@@ -17,9 +17,9 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -31,7 +31,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends AbstractEntity {
+public class Note extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -41,7 +41,6 @@ public class Bulletin extends AbstractEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	@PastOrPresent
 	protected Date				instatiationMoment;
 
 	@NotBlank
@@ -52,8 +51,8 @@ public class Bulletin extends AbstractEntity {
 	@Length(max = 100)
 	protected String			message;
 
-	@NotNull
-	protected Boolean			critical;
+	@Email
+	protected String			email;
 
 	@URL
 	protected String			moreInfo;

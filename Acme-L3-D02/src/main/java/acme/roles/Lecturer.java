@@ -35,7 +35,7 @@ public class Lecturer extends AbstractRole {
 	protected String			qualifications;
 
 	@URL
-	protected String			link;
+	protected String			moreInfo;
 
 	// Derived attributes -----------------------------------------------------
 

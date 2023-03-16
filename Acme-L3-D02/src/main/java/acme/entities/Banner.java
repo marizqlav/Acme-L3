@@ -1,14 +1,3 @@
-/*
- * Consumer.java
- *
- * Copyright (C) 2012-2023 Rafael Corchuelo.
- *
- * In keeping with the traditional purpose of furthering education and research, it is
- * the policy of the copyright owner to permit non-commercial use and redistribution of
- * this software. It has been tested carefully, but it is not guaranteed for any particular
- * purposes. The copyright owner does not offer any warranties or representations, nor do
- * they accept any liabilities with respect to them.
- */
 
 package acme.entities;
 
@@ -31,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends AbstractEntity {
+public class Banner extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -42,21 +31,27 @@ public class Bulletin extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
 	@PastOrPresent
-	protected Date				instatiationMoment;
+	protected Date				updateMoment;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				startPeriod;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				endPeriod;
+
+	@NotNull
+	@URL
+	protected String			pictureLink;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
-
-	@NotBlank
-	@Length(max = 100)
-	protected String			message;
+	protected String			slogan;
 
 	@NotNull
-	protected Boolean			critical;
-
 	@URL
-	protected String			moreInfo;
+	protected String			webDocument;
 
 	// Derived attributes -----------------------------------------------------
 
