@@ -52,4 +52,9 @@ public class Tutorial extends AbstractEntity {
 	@NotNull
 	@ManyToOne(optional = false)
 	protected Assistant			assistant;
+
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	protected Course			course;
 }
