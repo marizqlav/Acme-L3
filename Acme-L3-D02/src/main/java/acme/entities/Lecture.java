@@ -55,11 +55,6 @@ public class Lecture extends AbstractEntity {
 	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
-	protected Course			course;
-
-	@ManyToOne(optional = false)
-	@NotNull
-	@Valid
 	protected Lecturer			lecturer;
 
 }
