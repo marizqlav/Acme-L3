@@ -1,3 +1,19 @@
 key,instatiation-moment,heading,summary,start-period,end-period,price,more-info
-offer-01,2022/04/03 12:00,=-=-=-=-=-=-=-,2x1 in 8 bit RAM,2022/05/05 12:00,2022/05/05 12:15,EUR 50.00,null
-offer-02,2021/04/03 15:00,water bricks,%%%$$$###,2022/02/05 16:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-01,2022/04/03 12:00,1,2x1 in 8 bit RAM,2022/05/05 12:00,2022/05/05 12:15,EUR 50.00,null
+offer-02,2021/04/03 15:00,2c,%%%$$$###,2022/02/05 16:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-03,2020/01/1 00:00,ゴールドラゴン分析,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-04,2021/01/1 00:00,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%&",1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-05,2022/01/1 23:59,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%",1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-06,2021/01/1 23:59,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-07,2022/01/13 14:00,1,2c,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-08,2022/01/13 14:00,1,ゴールドラゴン分析,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-09,2022/01/13 14:00,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insect",2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-10,2022/01/13 14:00,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insec",2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-11,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-12,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-13,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 0.01,https://www.amazon.es
+offer-14,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 999999.99,https://www.amazon.es
+offer-15,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,
+offer-16,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.setillas.es
+offer-17,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
+offer-18,2022/01/13 14:00,1,1,2022/01/13 14:00,2022/05/05 12:15,USD 132.00,https://www.amazon.es
