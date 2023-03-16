@@ -1,3 +1,19 @@
 key,key:userAccount,statement,strongFeatures,weakFeatures,more-info
-student-01,user-account-student-01,"This is a random statement, shorter than 76 characters","Hard working, hardly working, neurodivergent","Too humble",https://www.wikidex.net/wiki/Omanyte
-student-02,user-account-student-02,"Free Vascovia","I have never made an error", "I don't know the meaning of defeat",https://www.wikidex.net/wiki/Turtwig
+student-01,user-account-student-01,1,1,1,https://www.wikidex.net/wiki/Omanyte
+student-02,user-account-student-02,2c,1,1,https://www.wikidex.net/wiki/Turtwig
+student-03,user-account-student-01,ゴールドラゴン分析,1,1,https://www.wikidex.net/wiki/Omanyte
+student-04,user-account-student-01,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%&",1,1,https://www.wikidex.net/wiki/Omanyte
+student-05,user-account-student-01,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%",1,1,https://www.wikidex.net/wiki/Omanyte
+student-06,user-account-student-01,1,1,1,https://www.wikidex.net/wiki/Omanyte
+student-07,user-account-student-01,1,2c,1,https://www.wikidex.net/wiki/Omanyte
+student-08,user-account-student-01,1,ゴールドラゴン分析,1,https://www.wikidex.net/wiki/Omanyte
+student-09,user-account-student-01,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insect",1,https://www.wikidex.net/wiki/Omanyte
+student-10,user-account-student-01,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insec",1,https://www.wikidex.net/wiki/Omanyte
+student-11,user-account-student-01,1,1,1,https://www.wikidex.net/wiki/Omanyte
+student-12,user-account-student-01,1,1,2c,https://www.wikidex.net/wiki/Omanyte
+student-13,user-account-student-01,1,1,ゴールドラゴン分析,https://www.wikidex.net/wiki/Omanyte
+student-14,user-account-student-01,1,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insect",https://www.wikidex.net/wiki/Omanyte
+student-15,user-account-student-01,1,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insec",https://www.wikidex.net/wiki/Omanyte
+student-16,user-account-student-01,1,1,1,
+student-17,user-account-student-01,1,1,1,http://www.setillas.com
+student-18,user-account-student-01,1,1,1,http://www.sfkjspjdfjdfñdfdfjsñlkfjfgodsmgoflgkvmflfskgvodlf.com
