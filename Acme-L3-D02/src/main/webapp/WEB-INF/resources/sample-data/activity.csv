@@ -1,5 +1,21 @@
 key,key:enrolment,title,summary,activityType,periodStart,periodEnd,link
-activity-01,enrolment-01,Test-001,Test the web application given in the URL,HANDS_ON,2022/03/04 11:00,2022/03/04 11:01,https://www.instagram.com
-activity-02,enrolment-02,Relaxation,"Formal classes will not begin yet, wait until we have more information",THEORETICAL,2022/03/04 11:00,2022/03/04 13:20,null
-activity-03,enrolment-01,Theory check,After reading chapters 5 and 45 assure you have the basic knowledge required,THEORETICAL,2022/02/25 11:00,2022/02/25 14:00,null
-activity-04,enrolment-01,Class attendance,Half of the class will be advancing in the theory lessons and the next half working on the project,BALANCED,2022/01/13 14:00,2022/01/13 16:00,https://www.pinterest.es
+activity-01,enrolment-01,1,Test the web application given in the URL,HANDS_ON,2022/03/04 11:00,2022/03/04 11:01,https://www.instagram.com
+activity-02,enrolment-02,2c,"Formal classes will not begin yet, wait until we have more information",THEORETICAL,2022/03/04 11:00,2022/03/04 13:20,null
+activity-03,enrolment-01,ゴールドラゴン分析,After reading chapters 5 and 45 assure you have the basic knowledge required,THEORETICAL,2022/02/25 11:00,2022/02/25 14:00,null
+activity-04,enrolment-01,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%&",Half of the class will be advancing in the theory lessons and the next half working on the project,BALANCED,2022/01/13 14:00,2022/01/13 16:00,https://www.pinterest.es
+activity-05,enrolment-01,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%",1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-06,enrolment-01,1,1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-07,enrolment-01,1,2c,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-08,enrolment-01,1,ゴールドラゴン分析,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-09,enrolment-02,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insect",HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-10,enrolment-02,1,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insec",HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-11,enrolment-02,1,1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-12,enrolment-02,1,1,THEORETICAL,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-13,enrolment-02,1,1,BALANCED,2022/01/13 14:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-14,enrolment-02,1,1,HANDS_ON,2022/01/1 00:00,2022/01/13 16:00,https://www.wikidex.net/wiki/Omanyte
+activity-15,enrolment-02,1,1,HANDS_ON,2023/01/1 00:00,2023/01/2 00:00,https://www.wikidex.net/wiki/Omanyte
+activity-16,enrolment-02,1,1,HANDS_ON,2022/01/1 23:59,2023/01/2 00:00,https://www.wikidex.net/wiki/Omanyte
+activity-17,enrolment-02,1,1,HANDS_ON,2023/01/1 23:59,2023/01/2 00:00,https://www.wikidex.net/wiki/Omanyte
+activity-18,enrolment-02,1,1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,
+activity-19,enrolment-02,1,1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,http://www.setillas.com
+activity-20,enrolment-02,1,1,HANDS_ON,2022/01/13 14:00,2022/01/13 16:00,http://www.sfkjspjdfjdfñdfdfjsñlkfjfgodsmgoflgkvmflfskgvodlf.com

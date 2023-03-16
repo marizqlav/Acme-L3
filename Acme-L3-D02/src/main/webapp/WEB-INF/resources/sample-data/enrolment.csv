@@ -1,3 +1,19 @@
-key,key:student,key:course,code,motivation,goals,workTime
-enrolment-01,student-01,course-01,"BB111", "Learn testing apps", "To pass the subject and learn a little bit", 2.3
-enrolment-02,student-02,course-02,"D233", "I have too much free time", "Proper communication, understanding the public, gaining confidence", 3.5
+key,key:student,key:course,code,motivation,goals
+enrolment-01,student-01,course-01,BB111,Learn testing apps,To pass the subject and learn a little bit
+enrolment-02,student-02,course-02,D233,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-03,student-02,course-01,A111,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-04,student-02,course-01,AA111,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-05,student-02,course-01,AAA111,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-06,student-02,course-01,ZZZ333,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-07,student-02,course-01,ZZ333,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-08,student-02,course-01,Z333,I have too much free time,"Proper communication, understanding the public, gaining confidence"
+enrolment-09,student-02,course-01,B111,1,"Proper communication, understanding the public, gaining confidence"
+enrolment-10,student-02,course-01,C111,2c,"Proper communication, understanding the public, gaining confidence"
+enrolment-11,student-02,course-01,D111,ゴールドラゴン分析,"Proper communication, understanding the public, gaining confidence"
+enrolment-12,student-02,course-01,E111,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%&","Proper communication, understanding the public, gaining confidence"
+enrolment-13,student-02,course-01,F111,"abc def ghi jkl mno pqrs tuv wxyz ABC DEF GHI JKL MNO PQRS TUV WXYZ !""§ $%","Proper communication, understanding the public, gaining confidence"
+enrolment-14,student-02,course-01,G111,I have too much free time,1
+enrolment-15,student-02,course-01,H111,I have too much free time,2c
+enrolment-16,student-02,course-01,I111,I have too much free time,ゴールドラゴン分析
+enrolment-17,student-02,course-01,J111,I have too much free time,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insect"
+enrolment-18,student-02,course-01,K111,I have too much free time,"Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insec"

@@ -38,7 +38,7 @@ public class Practicum extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$", message = "{regvalidation.code}")
 	protected String			code;
 
 	@NotBlank
@@ -55,12 +55,14 @@ public class Practicum extends AbstractEntity {
 
 	// Derived attributes ------------------------------------------
 
-	//@Transient
-	//protected Double			estimatedTime;
-
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	protected Company			company;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Course			course;
 }
