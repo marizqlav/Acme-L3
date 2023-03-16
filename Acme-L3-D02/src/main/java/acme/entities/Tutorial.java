@@ -29,7 +29,7 @@ public class Tutorial extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}[0-9]{3}$", message = "{regvalidation.code}")
 	protected String			code;
 
 	@NotBlank
@@ -38,7 +38,7 @@ public class Tutorial extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			summary;
+	protected String			abstract$;
 
 	@NotBlank
 	@Length(max = 100)
@@ -52,4 +52,9 @@ public class Tutorial extends AbstractEntity {
 	@NotNull
 	@ManyToOne(optional = false)
 	protected Assistant			assistant;
+
+	@Valid
+	@NotNull
+	@ManyToOne(optional = false)
+	protected Course			course;
 }

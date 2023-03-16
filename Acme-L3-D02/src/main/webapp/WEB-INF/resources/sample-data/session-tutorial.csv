@@ -1,3 +1,23 @@
-key,key:tutorial,title,summary,type,start-date,finish-date,more-info
+key,key:tutorial,title,abstract$,type,start-date,finish-date,more-info
 session-tutorial-01,tutorial-01,Session 1,Welcome to the session tutorial,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,https://es.wikipedia.org/wiki/Wikipedia:Portada
 session-tutorial-02,tutorial-02,Session 2,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-03,tutorial-02,P,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-04,tutorial-02,Pa,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-05,tutorial-02,One morningg when Gregor Samsa woke from troubled dreamss he found himself.,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-06,tutorial-02,One morningg when Gregor Samsa woke from troubled dreamss he found himself,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-07,tutorial-02,<script>alert("Hi!")</script>,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-08,tutorial-02,你好,This is a summary,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-09,tutorial-02,P,P,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-10,tutorial-02,P,Pa,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-11,tutorial-02,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed in,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-12,tutorial-02,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed i,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-13,tutorial-02,P,<script>alert("Hi!")</script>,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-14,tutorial-02,P,你好,HANDS_ON,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-15,tutorial-02,P,你好,THEORETICAL,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-16,tutorial-02,P,你好,BALANCED,2022/06/06 11:00,2022/06/06 12:30,
+session-tutorial-17,tutorial-02,P,你好,HANDS_ON,2122/06/06 11:00,2022/06/06 23:59,
+session-tutorial-18,tutorial-02,P,你好,HANDS_ON,2078/06/06 11:00,2022/06/06 00:00,
+session-tutorial-19,tutorial-02,P,你好,HANDS_ON,2022/06/06 11:00,2122/06/06 23:59,
+session-tutorial-20,tutorial-02,P,你好,HANDS_ON,2022/06/06 11:00,2078/06/06 00:00,
+session-tutorial-21,tutorial-02,P,你好,HANDS_ON,2022/06/06 11:00,2078/06/06 00:00,https://www.amazon.es/
+session-tutorial-22,tutorial-02,P,你好,HANDS_ON,2022/06/06 11:00,2078/06/06 00:00,https://es.wikipedia.org/wiki/Wikipedia:Portada

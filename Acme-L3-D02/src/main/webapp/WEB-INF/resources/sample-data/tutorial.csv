@@ -1,3 +1,24 @@
-key,key:assistant,code,title,summary,goals
-tutorial-01,assistant-01,A443,Performance Improvement,Improve performance of a team,Improve performance by 20%
-tutorial-02,assistant-02,B943,Fix water dispenser,Learn to fix water dispensers,Fix at least one water dispenser
+key,key:assistant,key:course,code,title,abstract$,goals
+tutorial-01,assistant-01,course-02,A443,Performance Improvement,Improve performance of a team,Improve performance by 20%
+tutorial-02,assistant-02,course-01,B943,Fix water dispenser,Learn to fix water dispensers,Fix at least one water dispenser
+tutorial-03,assistant-01,course-02,Z443,Performance Improvement,Improve performance of a team,Improve performance by 20%
+tutorial-04,assistant-01,course-02,AA443,Performance Improvement,Improve performance of a team,Improve performance by 20%
+tutorial-05,assistant-01,course-02,AZZ443,Performance Improvement,Improve performance of a team,Improve performance by 20%
+tutorial-06,assistant-02,course-01,A444,P,Improve performance of a team,Improve performance by 20%
+tutorial-07,assistant-01,course-02,A445,Pa,Improve performance of a team,Improve performance by 20%
+tutorial-08,assistant-01,course-02,A446,One morningg when Gregor Samsa woke from troubled dreamss he found himself.,Improve performance of a team,Improve performance by 20%
+tutorial-09,assistant-01,course-02,A447,One morningg when Gregor Samsa woke from troubled dreamss he found himself,Improve performance of a team,Improve performance by 20%
+tutorial-10,assistant-02,course-01,A448,<script>alert("Hi!")</script>,Improve performance of a team,Improve performance by 20%
+tutorial-11,assistant-01,course-02,A449,你好,Improve performance of a team,Improve performance by 20%
+tutorial-12,assistant-01,course-02,A450,P,P,Improve performance by 20%
+tutorial-13,assistant-02,course-01,A451,P,Pa,Improve performance by 20%
+tutorial-14,assistant-02,course-01,A452,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed in,Improve performance by 20%
+tutorial-15,assistant-02,course-01,A453,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed i,Improve performance by 20%
+tutorial-16,assistant-01,course-02,A454,P,<script>alert("Hi!")</script>,Improve performance by 20%
+tutorial-17,assistant-02,course-01,A456,P,你好,Improve performance by 20%
+tutorial-18,assistant-01,course-02,A457,P,P,P
+tutorial-19,assistant-02,course-01,A458,P,P,Pa
+tutorial-20,assistant-02,course-01,A459,P,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed in
+tutorial-21,assistant-01,course-02,A460,P,P,One morningg when Gregor Samsa woke from troubled dreamss he found himself transformed in his bed i
+tutorial-22,assistant-02,course-01,A461,P,P,<script>alert("Hi!")</script>
+tutorial-23,assistant-01,course-02,A462,P,P,你好
