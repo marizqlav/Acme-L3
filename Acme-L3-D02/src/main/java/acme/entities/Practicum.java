@@ -55,9 +55,6 @@ public class Practicum extends AbstractEntity {
 
 	// Derived attributes ------------------------------------------
 
-	//@Transient
-	//protected Double			estimatedTime;
-
 	// Relationships ----------------------------------------------------------
 	@NotNull
 	@Valid
