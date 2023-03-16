@@ -1,0 +1,5 @@
+key,key:enrolment,title,summary,activityType,periodStart,periodEnd,link
+activity-01,enrolment-01,Test-001,Test the web application given in the URL,HANDS_ON,2022/03/04 11:00,2022/03/04 11:01,https://www.instagram.com
+activity-02,enrolment-02,Relaxation,"Formal classes will not begin yet, wait until we have more information",THEORETICAL,2022/03/04 11:00,2022/03/04 13:20,null
+activity-03,enrolment-01,Theory check,After reading chapters 5 and 45 assure you have the basic knowledge required,THEORETICAL,2022/02/25 11:00,2022/02/25 14:00,null
+activity-04,enrolment-01,Class attendance,Half of the class will be advancing in the theory lessons and the next half working on the project,BALANCED,2022/01/13 14:00,2022/01/13 16:00,https://www.pinterest.es

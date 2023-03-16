@@ -24,6 +24,7 @@ import javax.validation.constraints.PastOrPresent;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
+import acme.framework.components.datatypes.Money;
 import acme.framework.data.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,7 +32,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Bulletin extends AbstractEntity {
+public class Offer extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
@@ -46,14 +47,22 @@ public class Bulletin extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
+	protected String			heading;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			message;
+	protected String			summary;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				startPeriod;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				endPeriod;
 
 	@NotNull
-	protected Boolean			critical;
+	protected Money				price;
 
 	@URL
 	protected String			moreInfo;
