@@ -8,12 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.practicum.list.label.code = Code
-authenticated.practicum.list.label.title = Title
-
-authenticated.practicum.form.label.code = Code
-authenticated.practicum.form.label.title = Title
-authenticated.practicum.form.label.overview = Overview
-authenticated.practicum.form.label.goals = Goals
-authenticated.practicum.form.label.company = Company
+company.practicum.list.label.code = Code
+company.practicum.list.label.title = Title
+company.practicum.list.label.overview = Overview
+company.practicum.list.label.goals = Goals
 
