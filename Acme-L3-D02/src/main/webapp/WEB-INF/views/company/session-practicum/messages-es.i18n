@@ -8,12 +8,13 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-company.practicum.list.label.code = Code
-company.practicum.list.label.title = Title
+company.sessionPracticum.list.label.title = Título
+company.sessionPracticum.list.label.overview = Resumen
+company.sessionPracticum.list.label.practicum.title = Título de la Práctica
 
-
-company.practicum.form.label.code = Code
-company.practicum.form.label.title = Title
-company.practicum.form.label.overview = Overview
-company.practicum.form.label.goals = Goals
+company.sessionPracticum.form.label.title = Título
+company.sessionPracticum.form.label.overview = Resumen
+company.sessionPracticum.form.label.startDate = Fecha Inicial
+company.sessionPracticum.form.label.endDate = Fecha Final
+company.sessionPracticum.form.label.moreInfo = Más Info
 
