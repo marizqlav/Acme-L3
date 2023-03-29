@@ -9,15 +9,13 @@
 - purposes.  The copyright owner does not offer any warranties or representations, nor do
 - they accept any liabilities with respect to them.
 --%>
+
 <%@page language="java"%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
-<acme:form>
-    <acme:input-textbox code="authenticated.course.label.code" path="code"/>
-    <acme:input-textbox  code="authenticated.course.label.title" path="title"/>
-    <acme:input-textarea code="authenticated.course.label.abstractDoc" path="abstractDoc"/>
-    <acme:input-textbox code="authenticated.course.label.type" path="type"/>
-    <acme:input-url code="authenticated.course.label.moreInfo" path="moreInfo"/>
-</acme:form>
+<acme:list>
+    <acme:list-column code="any.course.label.code" path="code" width="25%"/>
+    <acme:list-column code="any.course.label.title" path="title" width="75%"/>
+</acme:list>
