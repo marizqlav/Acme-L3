@@ -1,19 +1,19 @@
 
-package acme.features.authenticated.course;
+package acme.features.lecturer.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
-import acme.framework.components.accounts.Authenticated;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
+import acme.roles.Lecturer;
 
 @Service
-public class AuthenticatedCourseShowService extends AbstractService<Authenticated, Course> {
+public class LecturerCourseShowService extends AbstractService<Lecturer, Course> {
 
 	@Autowired
-	protected AuthenticatedCourseRepository repository;
+	protected LecturerCourseRepository repository;
 
 
 	@Override
@@ -25,7 +25,13 @@ public class AuthenticatedCourseShowService extends AbstractService<Authenticate
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		int id;
+		Course course;
+		id = super.getRequest().getData("id", int.class);
+		course = this.repository.findCourseById(id);
+		status = course != null && course.getLecturer().getId() == super.getRequest().getPrincipal().getActiveRoleId();
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
