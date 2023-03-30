@@ -14,12 +14,16 @@ import acme.roles.Student;
 public class StudentLectureController extends AbstractController<Student, Lecture> {
 
 	@Autowired
-	protected StudentLectureListService listService;
+	protected StudentLectureListService	listService;
+
+	@Autowired
+	protected StudentLectureShowService	showService;
 
 
 	@PostConstruct
 	protected void initialise() {
 		super.addBasicCommand("list", this.listService);
+		super.addBasicCommand("show", this.showService);
 	}
 
 }

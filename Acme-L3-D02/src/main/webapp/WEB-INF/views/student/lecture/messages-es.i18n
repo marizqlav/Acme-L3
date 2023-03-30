@@ -10,7 +10,8 @@
 
 student.lecture.list.label.title = Título
 student.lecture.list.label.abstractText = Resumen
-student.lecture.list.label.learningTimeInMinutes = Tiempo de Aprendizaje
+student.lecture.list.label.learningTime = Tiempo de Aprendizaje
 student.lecture.list.label.type = Tipo
 student.lecture.list.label.body = Cuerpo
 student.lecture.list.label.additionalInfo = Más Información
+student.lecture.list.label.lecturer = Profesor

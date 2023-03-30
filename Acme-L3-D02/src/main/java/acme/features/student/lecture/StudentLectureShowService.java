@@ -1,19 +1,19 @@
 
-package acme.features.student.course;
+package acme.features.student.lecture;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.Course;
+import acme.entities.Lecture;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Student;
 
 @Service
-public class StudentCourseShowService extends AbstractService<Student, Course> {
+public class StudentLectureShowService extends AbstractService<Student, Lecture> {
 
 	@Autowired
-	protected StudentCourseRepository repository;
+	protected StudentLectureRepository repository;
 
 
 	@Override
@@ -27,28 +27,28 @@ public class StudentCourseShowService extends AbstractService<Student, Course> {
 	public void authorise() {
 		boolean status;
 		int id;
-		Course course;
+		Lecture lecture;
 		id = super.getRequest().getData("id", int.class);
-		course = this.repository.findCourseById(id);
-		status = course != null && !course.getDraftMode();
+		lecture = this.repository.findLectureById(id);
+		status = lecture != null && !lecture.getDraftMode();
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		Course course;
+		Lecture lecture;
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		course = this.repository.findCourseById(id);
-		super.getBuffer().setData(course);
+		lecture = this.repository.findLectureById(id);
+		super.getBuffer().setData(lecture);
 	}
 
 	@Override
-	public void unbind(final Course course) {
-		assert course != null;
+	public void unbind(final Lecture lecture) {
+		assert lecture != null;
 		Tuple tuple;
-		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
-		tuple.put("lecturer", course.getLecturer().getIdentity().getFullName());
+		tuple = super.unbind(lecture, "title", "abstractDoc", "estimatedHours", "body", "type", "moreInfo");
+		tuple.put("lecturer", lecture.getLecturer().getIdentity().getFullName());
 		super.getResponse().setData(tuple);
 	}
 
