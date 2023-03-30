@@ -11,7 +11,8 @@
 
 student.lecture.list.label.title = Title
 student.lecture.list.label.abstractText = Abstract
-student.lecture.list.label.learningTimeInMinutes = Learning Time
+student.lecture.list.label.learningTime = Learning Time
 student.lecture.list.label.type = Type
 student.lecture.list.label.body = Body
 student.lecture.list.label.additionalInfo = More Info
+student.lecture.list.label.lecturer = Lecturer
