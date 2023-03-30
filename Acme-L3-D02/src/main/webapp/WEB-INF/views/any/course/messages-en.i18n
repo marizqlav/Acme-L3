@@ -13,4 +13,5 @@ any.course.label.title = Title
 any.course.label.abstractDoc = Abstract Document
 any.course.label.type = Type
 any.course.label.price = Price
+any.course.label.lecturer = Lecturer
 any.course.label.moreInfo = More Information

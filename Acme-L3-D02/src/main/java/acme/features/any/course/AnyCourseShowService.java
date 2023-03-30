@@ -19,7 +19,11 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 	@Override
 	public void check() {
 		boolean status;
-		status = super.getRequest().hasData("id", int.class);
+		int id;
+		Course course;
+		id = super.getRequest().getData("id", int.class);
+		course = this.repository.findCourseById(id);
+		status = course != null && !course.getDraftMode();
 		super.getResponse().setChecked(status);
 	}
 
@@ -42,6 +46,7 @@ public class AnyCourseShowService extends AbstractService<Any, Course> {
 		assert course != null;
 		Tuple tuple;
 		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
+		tuple.put("lecturer", course.getLecturer().getIdentity().getFullName());
 		super.getResponse().setData(tuple);
 	}
 

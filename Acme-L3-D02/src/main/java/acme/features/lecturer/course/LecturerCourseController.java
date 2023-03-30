@@ -22,7 +22,7 @@ public class LecturerCourseController extends AbstractController<Lecturer, Cours
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand("list", this.listService);
+		super.addCustomCommand("list-mine", "list", this.listService);
 		super.addBasicCommand("show", this.showService);
 	}
 
