@@ -17,6 +17,7 @@
 <acme:form>
     <acme:input-textbox code="company.practicum.form.label.code" path="code"/>
     <acme:input-textbox  code="company.practicum.form.label.title" path="title"/>
+    <acme:input-textbox  code="company.practicum.form.label.estimatedTime" path="estimatedTime"/>
     <acme:input-textarea code="company.practicum.form.label.overview" path="overview"/>
     <acme:input-textarea code="company.practicum.form.label.goals" path="goals"/>
 </acme:form>

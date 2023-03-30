@@ -16,4 +16,5 @@ company.practicum.form.label.code = Code
 company.practicum.form.label.title = Title
 company.practicum.form.label.overview = Overview
 company.practicum.form.label.goals = Goals
+company.practicum.form.label.estimatedTime = Estimated Time
 

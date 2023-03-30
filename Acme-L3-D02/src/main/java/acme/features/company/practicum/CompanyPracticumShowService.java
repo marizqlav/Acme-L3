@@ -52,11 +52,15 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 	@Override
 	public void unbind(final Practicum object) {
 		assert object != null;
+		Double estimatedTime;
+
+		estimatedTime = this.repository.findEstimatedTimeSessionsPerPracticum(object.getId());
+		if (estimatedTime == null)
+			estimatedTime = 0.0;
 
 		Tuple tuple;
-
 		tuple = super.unbind(object, "code", "title", "overview", "goals");
-
+		tuple.put("estimatedTime", estimatedTime);
 		super.getResponse().setData(tuple);
 	}
 
