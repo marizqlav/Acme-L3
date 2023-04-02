@@ -15,9 +15,11 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-    <acme:input-textbox code="authenticated.course.label.code" path="code"/>
-    <acme:input-textbox  code="authenticated.course.label.title" path="title"/>
-    <acme:input-textarea code="authenticated.course.label.abstractDoc" path="abstractDoc"/>
-    <acme:input-textbox code="authenticated.course.label.type" path="type"/>
-    <acme:input-url code="authenticated.course.label.moreInfo" path="moreInfo"/>
+    <acme:input-textbox code="student.course.label.code" path="code"/>
+    <acme:input-textbox  code="student.course.label.title" path="title"/>
+    <acme:input-textarea code="student.course.label.abstractDoc" path="abstractDoc"/>
+    <acme:input-textbox code="student.course.label.type" path="type"/>
+    <acme:input-url code="student.course.label.moreInfo" path="moreInfo"/>
+    <acme:input-textbox code="student.course.label.lecturer" path="lecturer"/>
 </acme:form>
+<acme:button code="student.course.form.button.lectures" action="/student/lecture/list?courseId=${id}"/>

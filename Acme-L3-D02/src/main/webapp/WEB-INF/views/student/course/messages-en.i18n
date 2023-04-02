@@ -8,9 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.course.label.code = Code
-authenticated.course.label.title = Title
-authenticated.course.label.abstractDoc = Abstract Document
-authenticated.course.label.type = Type
-authenticated.course.label.price = Price
-authenticated.course.label.moreInfo = More Information
+student.course.label.code = Code
+student.course.label.title = Title
+student.course.label.abstractDoc = Abstract Document
+student.course.label.type = Type
+student.course.label.price = Price
+student.course.label.moreInfo = More Information
+student.course.label.lecturer = Lecturer
+student.course.form.button.lectures = List Lectures

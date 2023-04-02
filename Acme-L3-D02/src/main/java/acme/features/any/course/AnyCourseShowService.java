@@ -1,19 +1,19 @@
 
-package acme.features.authenticated.course;
+package acme.features.any.course;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
-import acme.framework.components.accounts.Authenticated;
+import acme.framework.components.accounts.Any;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 
 @Service
-public class AuthenticatedCourseShowService extends AbstractService<Authenticated, Course> {
+public class AnyCourseShowService extends AbstractService<Any, Course> {
 
 	@Autowired
-	protected AuthenticatedCourseRepository repository;
+	protected AnyCourseRepository repository;
 
 
 	@Override
@@ -30,18 +30,18 @@ public class AuthenticatedCourseShowService extends AbstractService<Authenticate
 
 	@Override
 	public void load() {
-		Course object;
+		Course course;
 		int id;
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findCourseById(id);
-		super.getBuffer().setData(object);
+		course = this.repository.findCourseById(id);
+		super.getBuffer().setData(course);
 	}
 
 	@Override
-	public void unbind(final Course object) {
-		assert object != null;
+	public void unbind(final Course course) {
+		assert course != null;
 		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "abstractDoc", "type", "price", "moreInfo");
+		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
 		super.getResponse().setData(tuple);
 	}
 

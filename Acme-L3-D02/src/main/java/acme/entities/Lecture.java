@@ -50,6 +50,9 @@ public class Lecture extends AbstractEntity {
 	@URL
 	protected String			moreInfo;
 
+	@NotNull
+	protected Boolean			draftMode;
+
 	// Relationships ----------------------------------------------------------
 
 	@ManyToOne(optional = false)
