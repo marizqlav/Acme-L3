@@ -17,7 +17,15 @@
 <acme:form>
     <acme:input-textbox code="company.practicum.form.label.code" path="code"/>
     <acme:input-textbox  code="company.practicum.form.label.title" path="title"/>
-    <acme:input-textbox  code="company.practicum.form.label.estimatedTime" path="estimatedTime"/>
+    <acme:input-textbox  code="company.practicum.form.label.estimatedTime" path="estimatedTime" readonly= "true"/>
     <acme:input-textarea code="company.practicum.form.label.overview" path="overview"/>
     <acme:input-textarea code="company.practicum.form.label.goals" path="goals"/>
+    <acme:input-select code ="company.practicum.form.label.course" path="course" choices="${courses}"/>
+    
+    <jstl:choose>
+    	<jstl:when test="${_command == 'create'}">
+        	<acme:submit code="company.practicum.form.button.create" action="/company/practicum/create"/>
+    	</jstl:when> 
+    </jstl:choose>
+    
 </acme:form>

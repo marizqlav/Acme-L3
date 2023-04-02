@@ -1,10 +1,14 @@
 
 package acme.features.company.practicum;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
@@ -32,7 +36,7 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		Practicum practicum;
 
 		id = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findOneById(id);
+		practicum = this.repository.findOnePracticumById(id);
 		status = practicum != null && practicum.getCompany().getId() == super.getRequest().getPrincipal().getActiveRoleId();
 
 		super.getResponse().setAuthorised(status);
@@ -44,7 +48,7 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findOneById(id);
+		object = this.repository.findOnePracticumById(id);
 
 		super.getBuffer().setData(object);
 	}
@@ -54,6 +58,18 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		assert object != null;
 		Double estimatedTime;
 
+		final int companyId;
+		final Collection<Course> courses;
+		final SelectChoices choices;
+
+		if (!object.getDraftMode())
+			courses = this.repository.findAllCourses();
+		else {
+			companyId = super.getRequest().getPrincipal().getActiveRoleId();
+			courses = this.repository.findFinishedCourses();
+		}
+		choices = SelectChoices.from(courses, "title", object.getCourse());
+
 		estimatedTime = this.repository.findEstimatedTimeSessionsPerPracticum(object.getId());
 		if (estimatedTime == null)
 			estimatedTime = 0.0;
@@ -61,6 +77,8 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		Tuple tuple;
 		tuple = super.unbind(object, "code", "title", "overview", "goals");
 		tuple.put("estimatedTime", estimatedTime);
+		tuple.put("course", choices.getSelected().getKey());
+		tuple.put("courses", choices);
 		super.getResponse().setData(tuple);
 	}
 
