@@ -22,4 +22,5 @@ company.practicum.form.error.code = Code is already used
 company.practicum.form.label.course = Course
 company.practicum.form.button.sessionPracticum = Sessions
 company.practicum.form.button.create = Create
+company.practicum.form.button.update = Update
 

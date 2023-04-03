@@ -23,6 +23,9 @@
     <acme:input-select code ="company.practicum.form.label.course" path="course" choices="${courses}"/>
     
     <jstl:choose>
+    	<jstl:when test="${acme:anyOf(_command, 'show|update|delete')}">
+        	<acme:submit code="company.practicum.form.button.update" action="/company/practicum/update"/>
+        </jstl:when>
     	<jstl:when test="${_command == 'create'}">
         	<acme:submit code="company.practicum.form.button.create" action="/company/practicum/create"/>
     	</jstl:when> 

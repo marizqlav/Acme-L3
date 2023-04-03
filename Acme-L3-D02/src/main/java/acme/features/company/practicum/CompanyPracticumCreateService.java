@@ -80,7 +80,7 @@ public class CompanyPracticumCreateService extends AbstractService<Company, Prac
 	@Override
 	public void perform(final Practicum object) {
 		assert object != null;
-		object.setDraftMode(true);
+		object.setDraftMode(false);
 		this.repository.save(object);
 
 	}
