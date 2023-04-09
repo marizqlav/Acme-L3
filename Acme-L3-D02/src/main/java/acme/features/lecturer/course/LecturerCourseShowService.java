@@ -4,7 +4,9 @@ package acme.features.lecturer.course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.TypeNature;
 import acme.entities.Course;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -46,8 +48,11 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 	@Override
 	public void unbind(final Course course) {
 		assert course != null;
+		SelectChoices typeChoices;
 		Tuple tuple;
+		typeChoices = SelectChoices.from(TypeNature.class, course.getType());
 		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
+		tuple.put("types", typeChoices);
 		super.getResponse().setData(tuple);
 	}
 

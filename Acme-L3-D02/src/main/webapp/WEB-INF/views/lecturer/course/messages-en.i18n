@@ -14,3 +14,6 @@ lecturer.course.label.abstractDoc = Abstract Document
 lecturer.course.label.type = Type
 lecturer.course.label.price = Price
 lecturer.course.label.moreInfo = More Information
+lecturer.course.button.create = Create Course
+lecturer.course.error.natureType = Course can't be purely theoretical
+lecturer.course.error.code = Course's code already exists

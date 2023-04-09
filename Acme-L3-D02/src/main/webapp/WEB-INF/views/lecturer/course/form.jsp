@@ -18,6 +18,13 @@
     <acme:input-textbox code="lecturer.course.label.code" path="code"/>
     <acme:input-textbox  code="lecturer.course.label.title" path="title"/>
     <acme:input-textarea code="lecturer.course.label.abstractDoc" path="abstractDoc"/>
-    <acme:input-textbox code="lecturer.course.label.type" path="type"/>
+    <acme:input-select code="lecturer.course.label.type" path="type" choices="${types}"/>
+    <acme:input-money code="lecturer.course.label.price" path="price"/>
     <acme:input-url code="lecturer.course.label.moreInfo" path="moreInfo"/>
+    
+    <jstl:choose>
+	    <jstl:when test="${_command == 'create'}">
+	      <acme:submit code="lecturer.course.button.create" action="/lecturer/course/create"/>
+	    </jstl:when>
+  	</jstl:choose>
 </acme:form>

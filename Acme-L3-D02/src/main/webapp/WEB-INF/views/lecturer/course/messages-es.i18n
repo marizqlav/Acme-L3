@@ -14,3 +14,6 @@ lecturer.course.label.abstractDoc = Resumen
 lecturer.course.label.type = Tipo
 lecturer.course.label.price = Precio
 lecturer.course.label.moreInfo = Más información
+lecturer.course.button.create = Crear Curso
+lecturer.course.error.natureType = Curso no puede ser solo teórico
+lecturer.course.error.code = Código del curso ya existe
