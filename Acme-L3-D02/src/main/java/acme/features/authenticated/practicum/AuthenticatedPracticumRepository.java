@@ -12,8 +12,8 @@ import acme.framework.repositories.AbstractRepository;
 @Repository
 public interface AuthenticatedPracticumRepository extends AbstractRepository {
 
-	@Query("select p from Practicum p where p.course.id = :courseId")
-	Collection<Practicum> findPracticumByCourse(int courseId);
+	@Query("select p from Practicum p where p.course.id = :courseId and p.draftMode = false")
+	Collection<Practicum> findFinishedPracticumsByCourse(int courseId);
 
 	@Query("select p from Practicum p where p.id = :id")
 	Practicum findOnePracticumById(int id);

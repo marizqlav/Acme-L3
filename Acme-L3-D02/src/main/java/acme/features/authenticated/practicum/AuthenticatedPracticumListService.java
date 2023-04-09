@@ -35,7 +35,7 @@ public class AuthenticatedPracticumListService extends AbstractService<Authentic
 		final Collection<Practicum> objects;
 		int courseId;
 		courseId = super.getRequest().getData("courseId", int.class);
-		objects = this.repository.findPracticumByCourse(courseId);
+		objects = this.repository.findFinishedPracticumsByCourse(courseId);
 		super.getBuffer().setData(objects);
 	}
 
