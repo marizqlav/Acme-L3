@@ -17,5 +17,7 @@
 
 <acme:list>
     <acme:list-column code="lecturer.course.label.code" path="code" width="25%"/>
-    <acme:list-column code="lecturer.course.label.title" path="title" width="75%"/>
+    <acme:list-column code="lecturer.course.label.title" path="title" width="50%"/>
+    <acme:list-column code="lecturer.course.label.draftMode" path="draftMode" width="25%"/>
 </acme:list>
+<acme:button code="lecturer.course.button.create" action="/lecturer/course/create"/>

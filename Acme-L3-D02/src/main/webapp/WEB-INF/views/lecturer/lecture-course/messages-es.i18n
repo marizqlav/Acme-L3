@@ -8,11 +8,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-lecturer.course.label.code = Código
-lecturer.course.label.title = Título
-lecturer.course.label.abstractDoc = Resumen
-lecturer.course.label.type = Tipo
-lecturer.course.label.price = Precio
-lecturer.course.label.moreInfo = Más información
-lecturer.lecture.button.add-lecture = Añadir Clase a Curso
-lecturer.lecture.button.create = Crear
+lecturer.lectureCourse.label.lecture = Clase
+lecturer.lectureCourse.button.create = Añadir Clase a Curso

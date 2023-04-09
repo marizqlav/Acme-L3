@@ -12,7 +12,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
 @Service
-public class LecturerCourseShowService extends AbstractService<Lecturer, Course> {
+public class LecturerCourseDeleteService extends AbstractService<Lecturer, Course> {
 
 	@Autowired
 	protected LecturerCourseRepository repository;
@@ -32,17 +32,34 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		Course course;
 		id = super.getRequest().getData("id", int.class);
 		course = this.repository.findCourseById(id);
-		status = course != null && course.getLecturer().getId() == super.getRequest().getPrincipal().getActiveRoleId();
+		status = course != null && course.getDraftMode() && course.getLecturer().getId() == super.getRequest().getPrincipal().getActiveRoleId();
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		Course course;
 		int id;
+		Course course;
 		id = super.getRequest().getData("id", int.class);
 		course = this.repository.findCourseById(id);
 		super.getBuffer().setData(course);
+	}
+
+	@Override
+	public void bind(final Course course) {
+		assert course != null;
+		super.bind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
+	}
+
+	@Override
+	public void validate(final Course course) {
+		assert course != null;
+	}
+
+	@Override
+	public void perform(final Course course) {
+		assert course != null;
+		this.repository.delete(course);
 	}
 
 	@Override
@@ -55,5 +72,4 @@ public class LecturerCourseShowService extends AbstractService<Lecturer, Course>
 		tuple.put("types", typeChoices);
 		super.getResponse().setData(tuple);
 	}
-
 }

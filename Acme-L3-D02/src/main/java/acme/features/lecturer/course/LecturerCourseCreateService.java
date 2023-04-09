@@ -60,9 +60,9 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 	}
 
 	@Override
-	public void perform(final Course object) {
-		assert object != null;
-		this.repository.save(object);
+	public void perform(final Course course) {
+		assert course != null;
+		this.repository.save(course);
 	}
 
 	@Override
@@ -71,7 +71,7 @@ public class LecturerCourseCreateService extends AbstractService<Lecturer, Cours
 		SelectChoices typeChoices;
 		Tuple tuple;
 		typeChoices = SelectChoices.from(TypeNature.class, course.getType());
-		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo");
+		tuple = super.unbind(course, "code", "title", "abstractDoc", "type", "price", "moreInfo", "draftMode");
 		tuple.put("types", typeChoices);
 		super.getResponse().setData(tuple);
 	}
