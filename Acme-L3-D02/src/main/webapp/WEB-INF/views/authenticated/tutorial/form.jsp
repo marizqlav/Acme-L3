@@ -15,9 +15,9 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
-    <acme:input-textbox code="authenticated.tutorial.list.label.code" path="code"/>
-    <acme:input-textbox  code="authenticated.tutorial.list.label.title" path="title"/>
-    <acme:input-textarea code="authenticated.tutorial.list.label.abstract$" path="abstract$"/>
-    <acme:input-textarea code="authenticated.tutorial.list.label.goals" path="goals"/>
-    <acme:input-textarea code="authenticated.tutorial.list.label.assistant" path="assistant"/>
+    <acme:input-textbox code="authenticated.tutorial.form.label.code" path="code"/>
+    <acme:input-textbox  code="authenticated.tutorial.form.label.title" path="title"/>
+    <acme:input-textarea code="authenticated.tutorial.form.label.abstract$" path="abstract$"/>
+    <acme:input-textarea code="authenticated.tutorial.form.label.goals" path="goals"/>
+    <acme:input-textarea code="authenticated.tutorial.form.label.assistant" path="assistant"/>
 </acme:form>

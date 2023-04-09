@@ -16,6 +16,6 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:list>
-    <acme:list-column code="authenticated.tutorial.list.label.code" path="code" width="25%"/>
+    <acme:list-column code="authenticated.tutorial.list.label.code" path="code" width="10%"/>
     <acme:list-column code="authenticated.tutorial.list.label.title" path="title" width="75%"/>
 </acme:list>
