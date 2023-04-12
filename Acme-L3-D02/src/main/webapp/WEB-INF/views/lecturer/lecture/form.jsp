@@ -21,4 +21,15 @@
     <acme:input-textarea code="lecturer.lecture.label.body" path="body"/>
     <acme:input-textbox code="lecturer.course.label.type" path="type"/>
     <acme:input-url code="lecturer.course.label.moreInfo" path="moreInfo"/>
+    
+    <jstl:choose>
+	    <jstl:when test="${_command == 'create'}">
+	      <acme:submit code="lecturer.lecture.button.create" action="/lecturer/lecture/create"/>
+	    </jstl:when>
+   		<jstl:when test="${acme:anyOf(_command, 'show|update|publish') && draftMode == true}">
+	      <acme:submit code="lecturer.lecture.button.update" action="/lecturer/lecture/update"/>
+	      <acme:submit code="lecturer.lecture.button.delete" action="/lecturer/lecture/delete"/>
+	      <acme:submit code="lecturer.lecture.button.publish" action="/lecturer/lecture/publish"/>
+    	</jstl:when>
+  	</jstl:choose>
 </acme:form>

@@ -16,3 +16,6 @@ lecturer.course.label.price = Precio
 lecturer.course.label.moreInfo = Más información
 lecturer.lecture.button.add-lecture = Añadir Clase a Curso
 lecturer.lecture.button.create = Crear
+lecturer.lecture.button.update = Actualizar
+lecturer.lecture.button.delete = Eliminar
+lecturer.lecture.button.publish = Publicar

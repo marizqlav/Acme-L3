@@ -16,3 +16,6 @@ lecturer.lecture.label.type = Type
 lecturer.lecture.label.moreInfo = More Information
 lecturer.lecture.button.add-lecture = Add Lecture to Course
 lecturer.lecture.button.create = Create
+lecturer.lecture.button.update = Update
+lecturer.lecture.button.delete = Delete
+lecturer.lecture.button.publish = Publish
