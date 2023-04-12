@@ -17,9 +17,9 @@
 <acme:form>
     <acme:input-textbox code="lecturer.lecture.label.title" path="title"/>
     <acme:input-textarea  code="lecturer.lecture.label.abstractDoc" path="abstractDoc"/>
-    <acme:input-textbox code="lecturer.lecture.label.estimatedHours" path="estimatedHours"/>
+    <acme:input-integer code="lecturer.lecture.label.estimatedHours" path="estimatedHours"/>
     <acme:input-textarea code="lecturer.lecture.label.body" path="body"/>
-    <acme:input-textbox code="lecturer.course.label.type" path="type"/>
+    <acme:input-select code="lecturer.course.label.type" path="type" choices="${types}"/>
     <acme:input-url code="lecturer.course.label.moreInfo" path="moreInfo"/>
     
     <jstl:choose>

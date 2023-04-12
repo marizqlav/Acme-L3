@@ -16,8 +16,10 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:list>
-    <acme:list-column code="lecturer.lecture.label.title" path="title" width="75%"/>
+    <acme:list-column code="lecturer.lecture.label.title" path="title" width="50%"/>
     <acme:list-column code="lecturer.lecture.label.estimatedHours" path="estimatedHours" width="25%"/>
+    <acme:list-column code="lecturer.lecture.label.draftMode" path="draftMode" width="25%"/>
+    
 </acme:list>
 
 <jstl:choose>

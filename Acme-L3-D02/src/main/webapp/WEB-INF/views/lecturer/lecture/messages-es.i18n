@@ -14,6 +14,7 @@ lecturer.course.label.abstractDoc = Resumen
 lecturer.course.label.type = Tipo
 lecturer.course.label.price = Precio
 lecturer.course.label.moreInfo = Más información
+lecturer.lecture.label.draftMode = Boceto
 lecturer.lecture.button.add-lecture = Añadir Clase a Curso
 lecturer.lecture.button.create = Crear
 lecturer.lecture.button.update = Actualizar

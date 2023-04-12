@@ -4,7 +4,9 @@ package acme.features.lecturer.lecture;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.datatypes.TypeNature;
 import acme.entities.Lecture;
+import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
@@ -46,8 +48,11 @@ public class LecturerLectureShowService extends AbstractService<Lecturer, Lectur
 	@Override
 	public void unbind(final Lecture lecture) {
 		assert lecture != null;
+		SelectChoices typeChoices;
 		Tuple tuple;
-		tuple = super.unbind(lecture, "title", "abstractDoc", "estimatedHours", "body", "type", "moreInfo");
+		typeChoices = SelectChoices.from(TypeNature.class, lecture.getType());
+		tuple = super.unbind(lecture, "title", "abstractDoc", "estimatedHours", "body", "type", "moreInfo", "draftMode");
+		tuple.put("types", typeChoices);
 		super.getResponse().setData(tuple);
 	}
 

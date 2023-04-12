@@ -14,6 +14,7 @@ lecturer.lecture.label.estimatedHours = Estimated Hours
 lecturer.lecture.label.body = Body
 lecturer.lecture.label.type = Type
 lecturer.lecture.label.moreInfo = More Information
+lecturer.lecture.label.draftMode = Draft
 lecturer.lecture.button.add-lecture = Add Lecture to Course
 lecturer.lecture.button.create = Create
 lecturer.lecture.button.update = Update
