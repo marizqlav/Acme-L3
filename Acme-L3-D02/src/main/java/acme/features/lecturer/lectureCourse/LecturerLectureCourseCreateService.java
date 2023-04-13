@@ -90,8 +90,8 @@ public class LecturerLectureCourseCreateService extends AbstractService<Lecturer
 		remLectures = this.repository.findLecturesNotYetInCourse(courseId);
 		lecChoices = SelectChoices.from(remLectures, "title", lecCourse.getLecture());
 		tuple = super.unbind(lecCourse, "course", "lecture");
-		tuple.put("lecture", lecChoices.getSelected().getKey());
 		tuple.put("lectures", lecChoices);
+		tuple.put("lecture", lecChoices.getSelected().getKey());
 		tuple.put("courseId", courseId);
 		tuple.put("courseCode", course.getCode());
 		super.getResponse().setData(tuple);

@@ -40,6 +40,17 @@ public class LecturerLectureListCourseService extends AbstractService<Lecturer, 
 	}
 
 	@Override
+	public void unbind(final Collection<Lecture> lectures) {
+		assert lectures != null;
+		Tuple tuple;
+		int courseId;
+		tuple = new Tuple();
+		courseId = super.getRequest().getData("courseId", int.class);
+		tuple.put("courseId", courseId);
+		super.getResponse().setData(tuple);
+	}
+
+	@Override
 	public void unbind(final Lecture lecture) {
 		assert lecture != null;
 		Tuple tuple;

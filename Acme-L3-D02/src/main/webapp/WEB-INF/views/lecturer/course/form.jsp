@@ -31,6 +31,7 @@
 	      <acme:submit code="lecturer.course.button.delete" action="/lecturer/course/delete"/>
 	      <acme:submit code="lecturer.course.button.publish" action="/lecturer/course/publish"/>
 	      <acme:button code="lecturer.course.button.lectures" action="/lecturer/lecture/list-course?courseId=${id}"/>
+          <acme:button code="lecturer.course.button.add-lecture" action="/lecturer/lecture-course/add-lecture?courseId=${id}"/>
     	</jstl:when>
     	<jstl:when test="${acme:anyOf(_command, 'show|update|publish')}"> 
     	  <acme:button code="lecturer.course.button.lectures" action="/lecturer/lecture/list-course?courseId=${id}"/>

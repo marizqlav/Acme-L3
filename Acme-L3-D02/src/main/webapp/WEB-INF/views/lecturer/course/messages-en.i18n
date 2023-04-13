@@ -20,5 +20,6 @@ lecturer.course.button.update = Update
 lecturer.course.button.delete = Delete
 lecturer.course.button.publish = Publish
 lecturer.course.button.lectures = Lectures
+lecturer.course.button.add-lecture = Add Lecture
 lecturer.course.error.natureType = Course can't be purely theoretical
 lecturer.course.error.code = Course's code already exists

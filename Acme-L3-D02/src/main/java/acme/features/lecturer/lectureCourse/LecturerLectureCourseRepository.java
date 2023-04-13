@@ -19,7 +19,7 @@ public interface LecturerLectureCourseRepository extends AbstractRepository {
 	@Query("select l from Lecture l where l.id = :id")
 	Lecture findLectureById(int id);
 
-	@Query("select l from Lecture l left join LectureCourse lc on lc.lecture.id = l.id where lc.course.id is null")
+	@Query("select l from Lecture l left join LectureCourse lc on lc.lecture.id = l.id where lc.course.id != :id")
 	Collection<Lecture> findLecturesNotYetInCourse(int id);
 
 }
