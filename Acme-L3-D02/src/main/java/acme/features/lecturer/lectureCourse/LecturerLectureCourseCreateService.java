@@ -11,6 +11,8 @@ import acme.entities.Lecture;
 import acme.entities.LectureCourse;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
+import acme.framework.controllers.HttpMethod;
+import acme.framework.helpers.PrincipalHelper;
 import acme.framework.services.AbstractService;
 import acme.roles.Lecturer;
 
@@ -36,7 +38,7 @@ public class LecturerLectureCourseCreateService extends AbstractService<Lecturer
 		id = super.getRequest().getData("courseId", int.class);
 		course = this.repository.findCourseById(id);
 		status = course != null && course.getDraftMode() && course.getLecturer().getId() == super.getRequest().getPrincipal().getActiveRoleId();
-		super.getResponse().setAuthorised(true);
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -54,7 +56,12 @@ public class LecturerLectureCourseCreateService extends AbstractService<Lecturer
 	@Override
 	public void bind(final LectureCourse lecCourse) {
 		assert lecCourse != null;
+		int courseId;
+		Course course;
+		courseId = super.getRequest().getData("courseId", int.class);
+		course = this.repository.findCourseById(courseId);
 		super.bind(lecCourse, "lecture");
+		lecCourse.setCourse(course);
 	}
 
 	@Override
@@ -74,11 +81,25 @@ public class LecturerLectureCourseCreateService extends AbstractService<Lecturer
 		SelectChoices lecChoices;
 		Tuple tuple;
 		Collection<Lecture> remLectures;
-		remLectures = this.repository.findLecturesNotYetInCourse(lecCourse.getCourse().getId());
+		int courseId;
+		int lecturerId;
+		Course course;
+		courseId = super.getRequest().getData("courseId", int.class);
+		lecturerId = super.getRequest().getPrincipal().getActiveRoleId();
+		course = this.repository.findCourseById(courseId);
+		remLectures = this.repository.findLecturesNotYetInCourse(courseId);
 		lecChoices = SelectChoices.from(remLectures, "title", lecCourse.getLecture());
-		tuple = super.unbind(lecCourse, "lecture");
+		tuple = super.unbind(lecCourse, "course", "lecture");
 		tuple.put("lecture", lecChoices.getSelected().getKey());
 		tuple.put("lectures", lecChoices);
+		tuple.put("courseId", courseId);
+		tuple.put("courseCode", course.getCode());
 		super.getResponse().setData(tuple);
+	}
+
+	@Override
+	public void onSuccess() {
+		if (super.getRequest().getMethod().equals(HttpMethod.POST))
+			PrincipalHelper.handleUpdate();
 	}
 }

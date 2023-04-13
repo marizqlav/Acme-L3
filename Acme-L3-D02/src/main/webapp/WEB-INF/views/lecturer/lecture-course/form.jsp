@@ -15,6 +15,7 @@
 <%@taglib prefix="acme" uri="http://www.the-acme-framework.org/"%>
 
 <acme:form>
+  <acme:hidden-data path="id"/>
   <acme:input-select  code="lecturer.lectureCourse.label.lecture" path="lectures" choices="${lectures}"/>
   <acme:submit code="lecturer.lectureCourse.button.create" action="/lecturer/lecture-course/add-lecture?courseId=${courseId}"/>
 </acme:form>
