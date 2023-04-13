@@ -58,24 +58,18 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 		assert object != null;
 		Double estimatedTime;
 
-		final int companyId;
-		final Collection<Course> courses;
-		final SelectChoices choices;
+		Collection<Course> courses;
+		SelectChoices choices;
 
-		if (!object.getDraftMode())
-			courses = this.repository.findAllCourses();
-		else {
-			companyId = super.getRequest().getPrincipal().getActiveRoleId();
-			courses = this.repository.findFinishedCourses();
-		}
-		choices = SelectChoices.from(courses, "title", object.getCourse());
+		courses = this.repository.findAllCourses();
+		choices = SelectChoices.from(courses, "code", object.getCourse());
 
 		estimatedTime = this.repository.findEstimatedTimeSessionsPerPracticum(object.getId());
 		if (estimatedTime == null)
 			estimatedTime = 0.0;
 
 		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "overview", "goals");
+		tuple = super.unbind(object, "code", "title", "overview", "goals", "draftMode");
 		tuple.put("estimatedTime", estimatedTime);
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);

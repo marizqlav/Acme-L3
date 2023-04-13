@@ -10,6 +10,7 @@
 
 company.practicum.list.label.code = Código
 company.practicum.list.label.title = Título
+company.practicum.list.label.courseCode = Código de Curso
 company.practicum.list.button.create = Crear Practicum
 
 

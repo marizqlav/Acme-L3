@@ -10,6 +10,7 @@
 
 company.practicum.list.label.code = Code
 company.practicum.list.label.title = Title
+company.practicum.list.label.courseCode = Course Code
 company.practicum.list.button.create = Create Practicum
 
 
@@ -23,4 +24,5 @@ company.practicum.form.label.course = Course
 company.practicum.form.button.sessionPracticum = Sessions
 company.practicum.form.button.create = Create
 company.practicum.form.button.update = Update
-
+company.practicum.form.button.delete = Delete
+company.practicum.form.button.publish = Publish

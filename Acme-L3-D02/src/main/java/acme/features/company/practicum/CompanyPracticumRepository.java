@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.entities.SessionPracticum;
 import acme.framework.repositories.AbstractRepository;
 import acme.roles.Company;
 
@@ -32,8 +33,8 @@ public interface CompanyPracticumRepository extends AbstractRepository {
 	@Query("select p.code from Practicum p")
 	Collection<String> findAllCodes();
 
-	@Query("select c from Course c where c.draftMode = false")
-	Collection<Course> findFinishedCourses();
+	@Query("select s from SessionPracticum s where s.practicum.id = :id")
+	Collection<SessionPracticum> findSessionsByPracticumId(int id);
 
 	@Query("select c from Course c")
 	Collection<Course> findAllCourses();

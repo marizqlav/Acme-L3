@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
-public class CompanyPracticumUpdateService extends AbstractService<Company, Practicum> {
+public class CompanyPracticumPublishService extends AbstractService<Company, Practicum> {
 
 	@Autowired
 	protected CompanyPracticumRepository repository;
@@ -32,26 +33,28 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	@Override
 	public void authorise() {
 		boolean status;
-		Practicum practicum;
+		Practicum object;
+		Principal principal;
 		int practicumId;
 
 		practicumId = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findOnePracticumById(practicumId);
+		object = this.repository.findOnePracticumById(practicumId);
+		principal = super.getRequest().getPrincipal();
 
-		status = practicum != null && practicum.getCompany().getId() == super.getRequest().getPrincipal().getActiveRoleId() && practicum.getDraftMode();
+		status = object.getCompany().getId() == principal.getActiveRoleId();
 
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		Practicum practicum;
+		Practicum object;
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findOnePracticumById(id);
+		object = this.repository.findOnePracticumById(id);
 
-		super.getBuffer().setData(practicum);
+		super.getBuffer().setData(object);
 	}
 
 	@Override
@@ -76,6 +79,8 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	@Override
 	public void perform(final Practicum object) {
 		assert object != null;
+
+		object.setDraftMode(false);
 		this.repository.save(object);
 	}
 

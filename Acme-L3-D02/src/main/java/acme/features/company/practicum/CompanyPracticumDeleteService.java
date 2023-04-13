@@ -8,16 +8,19 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.entities.SessionPracticum;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
-public class CompanyPracticumUpdateService extends AbstractService<Company, Practicum> {
+public class CompanyPracticumDeleteService extends AbstractService<Company, Practicum> {
 
 	@Autowired
 	protected CompanyPracticumRepository repository;
+
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override
@@ -76,7 +79,12 @@ public class CompanyPracticumUpdateService extends AbstractService<Company, Prac
 	@Override
 	public void perform(final Practicum object) {
 		assert object != null;
-		this.repository.save(object);
+
+		Collection<SessionPracticum> sessionPracticums;
+
+		sessionPracticums = this.repository.findSessionsByPracticumId(object.getId());
+		this.repository.deleteAll(sessionPracticums);
+		this.repository.delete(object);
 	}
 
 	@Override
