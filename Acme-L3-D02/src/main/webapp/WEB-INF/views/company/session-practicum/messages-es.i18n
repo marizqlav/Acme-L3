@@ -18,3 +18,11 @@ company.sessionPracticum.form.label.startDate = Fecha Inicial
 company.sessionPracticum.form.label.endDate = Fecha Final
 company.sessionPracticum.form.label.moreInfo = Más Info
 
+company.sessionPracticum.list.button.create = Crear Sesión
+
+
+company.sessionPracticum.form.button.update = Actualizar
+company.sessionPracticum.form.button.delete = Borrar
+company.sessionPracticum.form.button.create = Crear
+
+

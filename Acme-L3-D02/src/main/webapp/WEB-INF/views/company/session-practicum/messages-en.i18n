@@ -17,3 +17,9 @@ company.sessionPracticum.form.label.overview = Overview
 company.sessionPracticum.form.label.startDate = Start Date
 company.sessionPracticum.form.label.endDate = End Date
 company.sessionPracticum.form.label.moreInfo = More Info
+
+company.sessionPracticum.list.button.create = Create Session
+
+company.sessionPracticum.form.button.update = Update
+company.sessionPracticum.form.button.delete = Delete
+company.sessionPracticum.form.button.create = Create

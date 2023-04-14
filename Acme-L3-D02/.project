@@ -38,7 +38,11 @@
 		<link>
 			<name>acme-framework</name>
 			<type>2</type>
+<<<<<<< HEAD
 			<location>C:/Users/marco/OneDrive/Escritorio/Segundo Cuatrimestre/DP2/Workspace-23/Frameworks/Acme-Framework-23.3.1/target/classes</location>
+=======
+			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-23.3.1/target/classes</locationURI>
+>>>>>>> refs/remotes/origin/master
 		</link>
 	</linkedResources>
 </projectDescription>

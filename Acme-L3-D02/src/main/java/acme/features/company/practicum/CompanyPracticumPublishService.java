@@ -8,13 +8,14 @@ import org.springframework.stereotype.Service;
 
 import acme.entities.Course;
 import acme.entities.Practicum;
+import acme.framework.components.accounts.Principal;
 import acme.framework.components.jsp.SelectChoices;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
-public class CompanyPracticumShowService extends AbstractService<Company, Practicum> {
+public class CompanyPracticumPublishService extends AbstractService<Company, Practicum> {
 
 	@Autowired
 	protected CompanyPracticumRepository repository;
@@ -32,12 +33,15 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 	@Override
 	public void authorise() {
 		boolean status;
-		int id;
-		Practicum practicum;
+		Practicum object;
+		Principal principal;
+		int practicumId;
 
-		id = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findOnePracticumById(id);
-		status = practicum != null && practicum.getCompany().getId() == super.getRequest().getPrincipal().getActiveRoleId();
+		practicumId = super.getRequest().getData("id", int.class);
+		object = this.repository.findOnePracticumById(practicumId);
+		principal = super.getRequest().getPrincipal();
+
+		status = object.getCompany().getId() == principal.getActiveRoleId();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -54,25 +58,47 @@ public class CompanyPracticumShowService extends AbstractService<Company, Practi
 	}
 
 	@Override
+	public void bind(final Practicum object) {
+		assert object != null;
+
+		int courseId;
+		Course course;
+
+		courseId = super.getRequest().getData("course", int.class);
+		course = this.repository.findOneCourseById(courseId);
+
+		super.bind(object, "code", "title", "overview", "goals");
+		object.setCourse(course);
+	}
+
+	@Override
+	public void validate(final Practicum object) {
+		assert object != null;
+	}
+
+	@Override
+	public void perform(final Practicum object) {
+		assert object != null;
+
+		object.setDraftMode(false);
+		this.repository.save(object);
+	}
+
+	@Override
 	public void unbind(final Practicum object) {
 		assert object != null;
-		Double estimatedTime;
 
 		Collection<Course> courses;
 		SelectChoices choices;
+		Tuple tuple;
 
 		courses = this.repository.findAllCourses();
 		choices = SelectChoices.from(courses, "code", object.getCourse());
 
-		estimatedTime = this.repository.findEstimatedTimeSessionsPerPracticum(object.getId());
-		if (estimatedTime == null)
-			estimatedTime = 0.0;
-
-		Tuple tuple;
-		tuple = super.unbind(object, "code", "title", "overview", "goals", "draftMode");
-		tuple.put("estimatedTime", estimatedTime);
+		tuple = super.unbind(object, "code", "title", "overview", "goals");
 		tuple.put("course", choices.getSelected().getKey());
 		tuple.put("courses", choices);
+
 		super.getResponse().setData(tuple);
 	}
 

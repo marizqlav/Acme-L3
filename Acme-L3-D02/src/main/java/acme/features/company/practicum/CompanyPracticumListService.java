@@ -46,6 +46,7 @@ public class CompanyPracticumListService extends AbstractService<Company, Practi
 		Tuple tuple;
 
 		tuple = super.unbind(object, "code", "title");
+		tuple.put("courseCode", object.getCourse().getCode());
 
 		super.getResponse().setData(tuple);
 	}

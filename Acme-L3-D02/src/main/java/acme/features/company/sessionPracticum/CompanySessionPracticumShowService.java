@@ -4,6 +4,7 @@ package acme.features.company.sessionPracticum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Practicum;
 import acme.entities.SessionPracticum;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -29,11 +30,11 @@ public class CompanySessionPracticumShowService extends AbstractService<Company,
 	public void authorise() {
 		boolean status;
 		int sessionPracticumId;
-		SessionPracticum sessionPracticum;
+		Practicum practicum;
 
 		sessionPracticumId = super.getRequest().getData("id", int.class);
-		sessionPracticum = this.repository.findOneSessionPracticumById(sessionPracticumId);
-		status = sessionPracticum != null && super.getRequest().getPrincipal().hasRole(sessionPracticum.getPracticum().getCompany());
+		practicum = this.repository.findPracticumBySessionPracticumId(sessionPracticumId);
+		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
 		super.getResponse().setAuthorised(status);
 	}
 
@@ -55,6 +56,8 @@ public class CompanySessionPracticumShowService extends AbstractService<Company,
 		Tuple tuple;
 
 		tuple = super.unbind(object, "title", "overview", "startDate", "endDate", "moreInfo");
+		tuple.put("practicumId", object.getPracticum().getId());
+		tuple.put("draftMode", object.getPracticum().getDraftMode());
 
 		super.getResponse().setData(tuple);
 	}

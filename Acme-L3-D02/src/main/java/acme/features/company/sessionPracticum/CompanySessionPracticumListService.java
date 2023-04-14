@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.Practicum;
 import acme.entities.SessionPracticum;
 import acme.framework.components.models.Tuple;
 import acme.framework.services.AbstractService;
@@ -20,21 +21,33 @@ public class CompanySessionPracticumListService extends AbstractService<Company,
 
 	@Override
 	public void check() {
-		super.getResponse().setChecked(true);
+		boolean status;
+
+		status = super.getRequest().hasData("practicumId", int.class);
+
+		super.getResponse().setChecked(status);
 	}
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		boolean status;
+		int practicumId;
+		Practicum practicum;
+
+		practicumId = super.getRequest().getData("practicumId", int.class);
+		practicum = this.repository.findOnePracticumById(practicumId);
+		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
 		Collection<SessionPracticum> objects;
-		int companyId;
+		int practicumId;
 
-		companyId = super.getRequest().getPrincipal().getActiveRoleId();
-		objects = this.repository.findManySessionPracticumByCompanyId(companyId);
+		practicumId = super.getRequest().getData("practicumId", int.class);
+		objects = this.repository.findSessionPracticumsByPracticumId(practicumId);
 
 		super.getBuffer().setData(objects);
 	}
@@ -46,6 +59,7 @@ public class CompanySessionPracticumListService extends AbstractService<Company,
 		Tuple tuple;
 
 		tuple = super.unbind(object, "title", "overview", "practicum.title");
+		tuple.put("practicumId", object.getPracticum().getId());
 
 		super.getResponse().setData(tuple);
 	}

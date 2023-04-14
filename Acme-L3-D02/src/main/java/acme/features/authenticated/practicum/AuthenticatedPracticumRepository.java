@@ -17,4 +17,5 @@ public interface AuthenticatedPracticumRepository extends AbstractRepository {
 
 	@Query("select p from Practicum p where p.id = :id")
 	Practicum findOnePracticumById(int id);
+
 }
