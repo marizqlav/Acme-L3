@@ -59,9 +59,21 @@ public class CompanySessionPracticumListService extends AbstractService<Company,
 		Tuple tuple;
 
 		tuple = super.unbind(object, "title", "overview", "practicum.title");
-		tuple.put("practicumId", object.getPracticum().getId());
 
 		super.getResponse().setData(tuple);
+	}
+
+	@Override
+	public void unbind(final Collection<SessionPracticum> objects) {
+		assert objects != null;
+		int practicumId;
+		Practicum practicum;
+		boolean showCreate;
+		practicumId = super.getRequest().getData("practicumId", int.class);
+		practicum = this.repository.findOnePracticumById(practicumId);
+		showCreate = practicum.getDraftMode() && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
+		super.getResponse().setGlobal("practicumId", practicumId);
+		super.getResponse().setGlobal("showCreate", showCreate);
 	}
 
 }

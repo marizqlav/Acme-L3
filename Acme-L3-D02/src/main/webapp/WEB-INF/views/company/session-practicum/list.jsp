@@ -23,4 +23,4 @@
     <acme:list-column code="company.sessionPracticum.list.label.practicum.title" path="practicum.title" width="15%"/>
 </acme:list>
 
-<acme:button code="company.sessionPracticum.list.button.create" action="/company/session-practicum/create?practicumId=${practicumId}"/>
+<acme:button test="${showCreate}" code="company.sessionPracticum.list.button.create" action="/company/session-practicum/create?practicumId=${practicumId}"/>

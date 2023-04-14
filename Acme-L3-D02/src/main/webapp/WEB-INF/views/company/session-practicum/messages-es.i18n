@@ -25,4 +25,6 @@ company.sessionPracticum.form.button.update = Actualizar
 company.sessionPracticum.form.button.delete = Borrar
 company.sessionPracticum.form.button.create = Crear
 
+company.sessionPracticum.list.button.create = Crear
+
 
