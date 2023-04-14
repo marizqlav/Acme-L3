@@ -18,7 +18,16 @@
 <acme:form>
     <acme:input-textbox code="company.sessionPracticum.form.label.title" path="title"/>
     <acme:input-textbox code="company.sessionPracticum.form.label.overview" path="overview"/>
-    <acme:input-textbox code="company.sessionPracticum.form.label.startDate" path="startDate"/>
-    <acme:input-textbox code="company.sessionPracticum.form.label.endDate" path="endDate"/>
-    <acme:input-textbox code="company.sessionPracticum.form.label.moreInfo" path="moreInfo"/>
+    <acme:input-moment code="company.sessionPracticum.form.label.startDate" path="startDate"/>
+    <acme:input-moment code="company.sessionPracticum.form.label.endDate" path="endDate"/>
+    <acme:input-url code="company.sessionPracticum.form.label.moreInfo" path="moreInfo"/>
+    <jstl:choose>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">
+			<acme:submit code="company.sessionPracticum.form.button.update" action="/company/session-practicum/update"/>
+			<acme:submit code="company.sessionPracticum.form.button.delete" action="/company/session-practicum/delete"/>
+		</jstl:when>
+		<jstl:when test="${_command == 'create'}">
+			<acme:submit code="company.sessionPracticum.form.button.create" action="/company/session-practicum/create?practicumId=${practicumId}"/>
+		</jstl:when>		
+	</jstl:choose>
 </acme:form>

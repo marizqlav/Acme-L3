@@ -11,7 +11,7 @@ import acme.framework.services.AbstractService;
 import acme.roles.Company;
 
 @Service
-public class CompanySessionPracticumShowService extends AbstractService<Company, SessionPracticum> {
+public class CompanySessionPracticumDeleteService extends AbstractService<Company, SessionPracticum> {
 
 	@Autowired
 	protected CompanySessionPracticumRepository repository;
@@ -20,9 +20,7 @@ public class CompanySessionPracticumShowService extends AbstractService<Company,
 	@Override
 	public void check() {
 		boolean status;
-
 		status = super.getRequest().hasData("id", int.class);
-
 		super.getResponse().setChecked(status);
 	}
 
@@ -31,34 +29,46 @@ public class CompanySessionPracticumShowService extends AbstractService<Company,
 		boolean status;
 		int sessionPracticumId;
 		Practicum practicum;
-
 		sessionPracticumId = super.getRequest().getData("id", int.class);
-		practicum = this.repository.findPracticumBySessionPracticumId(sessionPracticumId);
-		status = practicum != null && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
+		practicum = this.repository.findOnePracticumBySessionPracticumId(sessionPracticumId);
+		status = practicum != null && practicum.getDraftMode() && super.getRequest().getPrincipal().hasRole(practicum.getCompany());
 		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
 	public void load() {
-		SessionPracticum object;
+		final SessionPracticum object;
 		int id;
-
 		id = super.getRequest().getData("id", int.class);
 		object = this.repository.findOneSessionPracticumById(id);
-
 		super.getBuffer().setData(object);
+	}
+
+	@Override
+	public void bind(final SessionPracticum object) {
+		assert object != null;
+		super.bind(object, "title", "overview", "startDate", "endDate", "moreInfo");
+	}
+
+	@Override
+	public void validate(final SessionPracticum object) {
+		assert object != null;
+
+	}
+
+	@Override
+	public void perform(final SessionPracticum object) {
+		assert object != null;
+		this.repository.delete(object);
 	}
 
 	@Override
 	public void unbind(final SessionPracticum object) {
 		assert object != null;
-
 		Tuple tuple;
-
 		tuple = super.unbind(object, "title", "overview", "startDate", "endDate", "moreInfo");
-		tuple.put("practicumId", object.getPracticum().getId());
+		tuple.put("practicumId", super.getRequest().getData("practicumId", int.class));
 		tuple.put("draftMode", object.getPracticum().getDraftMode());
-
 		super.getResponse().setData(tuple);
 	}
 
